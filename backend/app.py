@@ -3,6 +3,10 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 time_logs = []
 
+@app.route('/')
+def home():
+    return "Employee Time Tracker API is running!"
+
 @app.route('/log-time', methods=['POST'])
 def log_time():
     data = request.json
