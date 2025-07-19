@@ -1,0 +1,44 @@
+# Byte-compiled / cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Pip install logs
+pip-log.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+*.cover
+*.log
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Docker and Git files
+.dockerignore
+.git
+.gitignore
+
+# IDE / Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if using frontend JS)
+node_modules/
+npm-debug.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

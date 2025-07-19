@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Time Tracker</title>
+</head>
+<body>
+  <h1>Log Time</h1>
+  <form id="timeForm">
+    Name: <input type="text" id="name" required><br>
+    Time: <input type="text" id="time" required><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('timeForm').onsubmit = async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const time = document.getElementById('time').value;
+
+      await fetch('/log-time', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, time })
+      });
+
+      alert('Time logged!');
+    };
+  </script>
+</body>
+</html>
